@@ -1,6 +1,9 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import Dogs from './views/Dogs/Dogs';
+import Dog from './views/Dog/Dog';
+import Home from './views/Home/Home';
 
 function App() {
   return (
@@ -14,6 +17,7 @@ function App() {
         <Switch>
           <Route exact path="/dogs" component={Dogs} />
           <Route exact path="/dogs/:id" component={Dog} />
+          <Route exact path="/" component={Home} />
         </Switch>
       </BrowserRouter>
     </div>
