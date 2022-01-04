@@ -6,12 +6,14 @@ export default function DogList({ dogs }) {
     <section>
       <h3>Dogs</h3>
       {dogs.map((dog) => (
-        <Link key={dog.id} to={`/dogs/${dog.id}`}>
-          <img src={`https://placedog.net/500?id=${dog.id}`}></img>
+        <div key={dog.id}>
+          <Link key={dog.id} to={`/dogs/${dog.id}`}>
+            <img src={dog.image}></img>
+          </Link>
           <p>Name: {dog.name}</p>
           <p>Age: {dog.age}</p>
           <p>Breed: {dog.breed}</p>
-        </Link>
+        </div>
       ))}
     </section>
   );
