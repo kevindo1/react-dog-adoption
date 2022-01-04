@@ -2,6 +2,7 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import DogList from '../../components/DogList';
 import { fetchDogs } from '../../services/dogs';
+import './Dogs.css';
 
 export default function Dogs() {
   const [dogs, setDogs] = useState([]);
