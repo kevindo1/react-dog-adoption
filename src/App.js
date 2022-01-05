@@ -4,6 +4,7 @@ import { NavLink } from 'react-router-dom';
 import Dogs from './views/Dogs/Dogs';
 import Dog from './views/Dog/Dog';
 import Header from './views/Header/Header';
+import Admin from './views/Admin/Admin';
 
 function App() {
   return (
@@ -13,8 +14,12 @@ function App() {
         <header>
           <NavLink to="/">Home</NavLink>
           <NavLink to="/dogs">Dogs</NavLink>
+          <NavLink to="/admin">Admin</NavLink>
         </header>
         <Switch>
+          <Route exact path="/admin">
+            <Admin />
+          </Route>
           <Route exact path="/dogs">
             <Dogs />
           </Route>
