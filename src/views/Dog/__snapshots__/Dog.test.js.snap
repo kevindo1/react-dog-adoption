@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders individual dog 1`] = `
+<div>
+  <div>
+    <section>
+      <div>
+        <a
+          href="/dogs/10"
+        >
+          <img
+            src="https://placedog.net/500?id=6"
+          />
+        </a>
+        <p>
+          Name: 
+          Barton
+        </p>
+        <p>
+          Age: 
+          1
+        </p>
+        <p>
+          Breed: 
+          Weimaraner
+        </p>
+        <p>
+          Adores every person he meets. Very social and lots of energy
+        </p>
+      </div>
+    </section>
+  </div>
+</div>
+`;

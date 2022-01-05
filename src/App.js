@@ -3,6 +3,7 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import { NavLink } from 'react-router-dom';
 import Dogs from './views/Dogs/Dogs';
 import Dog from './views/Dog/Dog';
+import Header from './views/Header/Header';
 
 function App() {
   return (
@@ -10,7 +11,8 @@ function App() {
       <h1>Dog Adoption</h1>
       <BrowserRouter>
         <header>
-          <NavLink to="/dogs">Home</NavLink>
+          <NavLink to="/">Home</NavLink>
+          <NavLink to="/dogs">Dogs</NavLink>
         </header>
         <Switch>
           <Route exact path="/dogs">
@@ -18,6 +20,9 @@ function App() {
           </Route>
           <Route exact path="/dogs/:id">
             <Dog />
+          </Route>
+          <Route exact path="/">
+            <Header />
           </Route>
         </Switch>
       </BrowserRouter>
