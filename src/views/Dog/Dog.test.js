@@ -12,3 +12,11 @@ test('renders individual dog', async () => {
 
   expect(container).toMatchSnapshot();
 });
+
+// test('renders individual dog', async () => {
+//   const { container } = render(<Dog match={{ params: { id: 10 } }} />);
+
+//   await screen.findByText('Name: Barton');
+
+//   expect(container).toMatchSnapshot();
+// });
