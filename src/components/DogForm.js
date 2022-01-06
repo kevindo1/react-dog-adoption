@@ -59,7 +59,9 @@ export default function DogForm({ handleSubmit, updateDogState, name, age, image
             }}
           />
         </label>
-        <button onClick={handleSubmit}>Submit</button>
+        <div>
+          <button onClick={handleSubmit}>Submit</button>
+        </div>
       </form>
     </div>
   );
