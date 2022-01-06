@@ -1,30 +1,24 @@
 import React from 'react';
-import { useState, useEffect } from 'react';
-import { fetchDogsById } from '../../services/dogs';
-import { useParams } from 'react-router-dom/cjs/react-router-dom.min';
+import { useState } from 'react';
 import DogForm from '../../components/DogForm';
+import { createDog } from '../../services/dogs';
 
 export default function Admin() {
-  const [dog, setDog] = useState('');
-  // const [image, setImage] = useState('');
-  // const [age, setAge] = useState('');
-  // const [bio, setBio] = useState('');
-  // const [breed, setBreed] = useState('');
-  const params = useParams();
+  const [dog, setDog] = useState({});
 
-  useEffect(() => {
-    const fetchData = async () => {
-      const data = await fetchDogsById(params.id);
-      setDog(data);
-    };
-    fetchData();
-  }, [params.id]);
+  const updateDogState = (key, value) => {
+    dog[key] = value;
+    setDog({ ...dog });
+  };
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    await createDog(dog);
+  };
 
   return (
-    <>
-      <div>
-        <DogForm dog={dog} />
-      </div>
-    </>
+    <div>
+      <DogForm {...dog} handleSubmit={handleSubmit} updateDogState={updateDogState} />
+    </div>
   );
 }
