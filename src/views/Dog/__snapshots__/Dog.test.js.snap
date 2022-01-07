@@ -6,27 +6,35 @@ exports[`renders individual dog 1`] = `
     <section>
       <div>
         <a
-          href="/dogs/10"
+          href="/dogs/12"
         >
           <img
-            src="https://placedog.net/500?id=6"
+            src="https://placedog.net/500?id=3"
           />
         </a>
         <p>
           Name: 
-          Barton
+          Thor
         </p>
         <p>
           Age: 
-          1
+          4
         </p>
         <p>
           Breed: 
-          Weimaraner
+          Asguardian
         </p>
         <p>
-          Adores every person he meets. Very social and lots of energy
+          God of Thunder
         </p>
+        <a
+          href="/dogs/12/edit"
+        >
+          Edit
+        </a>
+        <button>
+          Delete
+        </button>
       </div>
     </section>
   </div>
