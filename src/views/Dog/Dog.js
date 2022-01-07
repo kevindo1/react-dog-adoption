@@ -25,6 +25,7 @@ export default function Dog() {
   const handleDelete = async (e) => {
     e.preventDefault();
     await deleteDog(dog.id);
+    window.location.replace('/dogs');
   };
 
   return (
