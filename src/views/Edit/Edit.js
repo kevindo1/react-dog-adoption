@@ -30,6 +30,12 @@ export default function Edit() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await updateDog(dog);
+    if (updateDog) {
+      alert('Dog has been added!');
+    } else {
+      alert('Error, request failed');
+    }
+    window.location.replace('/dogs');
   };
 
   return (

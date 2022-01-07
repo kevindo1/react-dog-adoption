@@ -30,3 +30,8 @@ export async function createDog(dog) {
   });
   return checkError(resp);
 }
+
+export async function deleteDog(id) {
+  const resp = await client.from('dogs').delete().match({ id: id });
+  return checkError(resp);
+}

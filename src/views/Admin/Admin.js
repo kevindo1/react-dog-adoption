@@ -14,6 +14,12 @@ export default function Admin() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     await createDog(dog);
+    if (createDog) {
+      alert('Dog has been added!');
+    } else {
+      alert('Error, request failed');
+    }
+    window.location.replace('/dogs');
   };
 
   return (
