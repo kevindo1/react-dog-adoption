@@ -1,0 +1,57 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`renders Edit individual dog page 1`] = `
+<div>
+  <div>
+    <div>
+      <form>
+        <label>
+          Name:
+          <input
+            name="name"
+            type="text"
+            value="Thor"
+          />
+        </label>
+        <label>
+          Age:
+          <input
+            name="age"
+            type="text"
+            value="4"
+          />
+        </label>
+        <label>
+          Image url:
+          <input
+            name="image"
+            type="text"
+            value="https://placedog.net/500?id=3"
+          />
+        </label>
+        <label>
+          Breed:
+          <input
+            name="breed"
+            type="text"
+            value="Asguardian"
+          />
+        </label>
+        <label>
+          Bio:
+          <input
+            name="bio"
+            type="text"
+            value="God of Thunder"
+          />
+        </label>
+        <div>
+          <button>
+            Submit
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+`;
