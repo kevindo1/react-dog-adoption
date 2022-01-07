@@ -4,19 +4,11 @@ import { MemoryRouter, Route } from 'react-router-dom';
 
 test('renders individual dog', async () => {
   const { container } = render(
-    <MemoryRouter initialEntries={['/dogs/10']}>
+    <MemoryRouter initialEntries={['/dogs/12']}>
       <Route path="/dogs/:id" component={Dog} />
     </MemoryRouter>
   );
-  await screen.findByText('Name: Barton');
+  await screen.findByText('Name: Thor');
 
   expect(container).toMatchSnapshot();
 });
-
-// test('renders individual dog', async () => {
-//   const { container } = render(<Dog match={{ params: { id: 10 } }} />);
-
-//   await screen.findByText('Name: Barton');
-
-//   expect(container).toMatchSnapshot();
-// });
